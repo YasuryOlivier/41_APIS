@@ -28,22 +28,15 @@ function tarea(){
 	cajaUno.appendChild(btnGuardar);
 	cajaUno.appendChild(btnCerrar);
 
-	//hacer un evento en mi botón, que guarde texto.
-	//btnGuardar.addEventListener("click", guardarNuevo);
-	btnGuardar.onclick=function(){
-			var texto=document.createTextNode(nuevoInput.value);
-			nuevoInput.appendChild(texto);
-
-	}
-	btnCerrar.onclick=function(){
-		nuevoInput.parentNode.removeChild(nuevoInput);
-		btnGuardar.parentNode.removeChild(btnGuardar);
-		btnCerrar.parentNode.removeChild(btnCerrar);
+	
+	btnGuardar.addEventListener("click", guardarNuevo);
+	function guardarNuevo () {
+			alert("h");
 	}
 
-	document.getElementById("nuevoInput").value="";
-
+	//document.getElementById("nuevoInput").value="";
 }
+
 
 /*var eventoButton=document.getElementById("agregaTarea");
 	eventoButton=document.addEventListener("click", sumaTarea);
